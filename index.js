@@ -30,7 +30,7 @@ module.exports = function () {
     if (ua.indexOf('OPR') > 0 || ua.indexOf('Opera') > 0) {
         browser = 'Opera';
     } else if (ua.indexOf('MSIE ') > 0) {
-        browser = 'depcricatedIE';
+        browser = 'deprecatedIE';
     } else if (ua.indexOf('Trident/') > 0) {
         browser = 'IE11';
     } else if (ua.indexOf('Edge/') > 0) {
