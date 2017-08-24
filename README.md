@@ -2,11 +2,6 @@ Device Detect
 =============
 JavaScript module to check if user agent to return the device and browser.
 
-## Install
-
-```js
-npm install device-detect --save-dev
-```
 
 ## Use
 
