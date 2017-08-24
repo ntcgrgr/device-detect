@@ -29,18 +29,18 @@ module.exports = function () {
     // get browser
     if (ua.indexOf('OPR') > 0 || ua.indexOf('Opera') > 0) {
         browser = 'Opera';
-    } else if (ua.indexOf('Chrome') > 0) {
-        browser = 'Chrome';
-    } else if (ua.indexOf('Firefox') > 0) {
-        browser = 'Firefox';
-    } else if (ua.indexOf('Safari') > 0) {
-        browser = 'Safari';
     } else if (ua.indexOf('MSIE ') > 0) {
         browser = 'depcricatedIE';
     } else if (ua.indexOf('Trident/') > 0) {
         browser = 'IE11';
     } else if (ua.indexOf('Edge/') > 0) {
         browser = 'Edge';
+    } else if (ua.indexOf('Chrome') > 0) {
+        browser = 'Chrome';
+    } else if (ua.indexOf('Firefox') > 0) {
+        browser = 'Firefox';
+    } else if (ua.indexOf('Safari') > 0) {
+        browser = 'Safari';
     }
 
     // create object
