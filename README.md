@@ -42,8 +42,10 @@ Browsers:
 - Chrome
 - Opera
 - Firefox
-- IE
 - Safari
+- IE < 11
+- IE11
+- Edge
  
 ## Release History
 * 1.0.7: Update test script.
