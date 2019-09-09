@@ -3,6 +3,7 @@ module.exports = function () {
     var ua = window.navigator.userAgent,
         device,
         browser,
+        version = undefinded,
         data = {};
 
     // get device
@@ -29,25 +30,30 @@ module.exports = function () {
     // get browser
     if (ua.indexOf('OPR') > 0 || ua.indexOf('Opera') > 0) {
         browser = 'Opera';
+        version = parseInt(ua.match(/OPR\/(.*)? /)[1]);
     } else if (ua.indexOf('MSIE ') > 0) {
         browser = 'deprecatedIE';
     } else if (ua.indexOf('Trident/') > 0) {
         browser = 'IE11';
     } else if (ua.indexOf('Edge/') > 0) {
         browser = 'Edge';
+        version = parseInt(ua.match(/Edge\/(.*)? /)[1]);
     } else if (ua.indexOf('Chrome') > 0) {
         browser = 'Chrome';
+        version = parseInt(ua.match(/Chrome\/(.*)? /)[1]);
     } else if (ua.indexOf('Firefox') > 0) {
         browser = 'Firefox';
+        version = parseInt(ua.match(/Firefox\/(.*)? /)[1]);
     } else if (ua.indexOf('Safari') > 0) {
         browser = 'Safari';
+        version = parseInt(ua.match(/Version\/(.*)? /)[1]);
     }
 
     // create object
     data = {
         device: device,
-        browser: browser
+        browser: browser,
+        version: version
     };
     return data;
 };
-
