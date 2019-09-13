@@ -3,7 +3,7 @@ module.exports = function () {
     var ua = window.navigator.userAgent,
         device,
         browser,
-        version = undefinded,
+        version = undefined,
         data = {};
 
     // get device
