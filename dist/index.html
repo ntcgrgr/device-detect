@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Detect Demo</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Device</th>
+    <th>Browser</th>
+    <th>Version</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td id="device"></td>
+    <td id="browser"></td>
+    <td is="version"></td>
+  </tr>
+  </tbody>
+</table>
+<script src="device-detect.js"></script>
+<script>
+    document.getElementById('device').innerText = deviceDetect.default.device;
+    document.getElementById('browser').innerText = deviceDetect.default.browser;
+    document.getElementById('version').innerText = deviceDetect.default.version;
+</script>
+</body>
+</html>
