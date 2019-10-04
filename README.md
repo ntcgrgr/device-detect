@@ -6,7 +6,7 @@ JavaScript module to check if user agent to return the device and browser.
 ## Use
 
 ```js
-var deviceDetect = require('device-detect')();
+import deviceDetect from 'device-detect';
 
 // return all device and browser object
 console.log(deviceDetect);
@@ -63,4 +63,34 @@ Browsers:
 7. Create new Pull Request
 
 ## License
-MIT © [Ryan Burgess](http://github.com/ryanburgess)
+MIT © [Ryan Burgess](https://github.com/ryanburgess)
+
+##Gather Test data from [whatismybrowser.com](https://developers.whatismybrowser.com/useragents/explore/)
+```js
+/** For getting browser bases ua's from */
+const browser = 'Chrome';
+const resultA = Array.prototype.reduce.call(document.querySelectorAll('table tr'), (acc, tr) => {
+  const cells = tr.cells;
+  const ua = cells[0].innerText;
+  const version = cells[1].innerText;
+  const device = cells[2].innerText;
+  const hardware = cells[3].innerText;
+
+  return {...acc, [`${device} on ${hardware} running ${browser} ${version}`]: {ua, device, browser, version}};
+}, {});
+JSON.stringify(resultA);
+
+/** for getting device based ua's from */
+const device = 'Android';
+const resultB = Array.prototype.reduce.call(document.querySelectorAll('table tr'), (acc, tr) => {
+  const cells = tr.cells;
+  const ua = cells[0].innerText;
+  const software = cells[1].innerText.split(' ');
+  const version = software.pop();
+  const browser = software.join(' ');
+  const hardware = cells[3].innerText;
+​
+  return {...acc, [`${device} on ${hardware} running ${browser} ${version}`]: {ua, device, browser, version}};
+}, {});
+JSON.stringify(resultB);
+```
