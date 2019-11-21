@@ -1,5 +1,5 @@
 {
-  "name": "@mrmadclown/device-detect",
+  "name": "@ntcgrgr/device-detect",
   "version": "1.0.8",
   "description": "JavaScript module to check if user agent to return the device and browser.",
   "main": "dist/device-detect.js",
