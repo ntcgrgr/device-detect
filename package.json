@@ -1,27 +1,28 @@
 {
-  "name": "device-detect",
+  "name": "@mrmadclown/device-detect",
   "version": "1.0.8",
   "description": "JavaScript module to check if user agent to return the device and browser.",
   "main": "dist/device-detect.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "prepublishOnly": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ntcgrgr/device-detect.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "javascript",
     "module",
-    "browserify",
     "device",
     "detect",
     "user",
     "agent",
-    "browser",
-    "node",
-    "nodejs"
+    "browser"
   ],
   "dependencies": {},
   "devDependencies": {
