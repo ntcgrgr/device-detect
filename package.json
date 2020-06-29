@@ -1,6 +1,6 @@
 {
   "name": "@ntcgrgr/device-detect",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "JavaScript module to check if user agent to return the device and browser.",
   "main": "dist/device-detect.js",
   "scripts": {

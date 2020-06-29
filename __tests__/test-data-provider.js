@@ -149,12 +149,6 @@ const chrome = {
     browser: "Chrome",
     version: 76
   },
-  "OpenBSD on Computer running Chrome 36": {
-    ua: "Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
-    device: "OpenBSD",
-    browser: "Chrome",
-    version: 36
-  }
 }
 const firefox = {
   "Windows on Computer running Firefox 7": {
@@ -673,12 +667,6 @@ const ie11 = {
     browser: "IE11",
     version: 11
   },
-  "Windows on Computer running IE11 11 / 5": {
-    ua: "Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
-    device: "Windows",
-    browser: "IE11",
-    version: 11
-  },
   "Windows on Computer running IE11 11 / 6": {
     ua: "Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko",
     device: "Windows",
@@ -699,6 +687,12 @@ const ie11 = {
   }
 };
 const deprecatedIE = {
+  "Windows on Computer running IE11 11 / 5": {
+    ua: "Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
+    device: "Windows",
+    browser: "deprecatedIE",
+    version: 11
+  },
   "Windows on Computer running deprecatedIE 5 / 1": {
     ua: "Mozilla/4.0 (compatible; MSIE 5.0; Windows 98; DigExt)",
     device: "Windows",
@@ -867,12 +861,6 @@ const deprecatedIE = {
     device: "Windows",
     browser: "deprecatedIE",
     version: 7
-  },
-  "Windows on Computer running deprecatedIE 8 / 1": {
-    ua: "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; WOW64; Trident/4.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)",
-    device: "Windows",
-    browser: "deprecatedIE",
-    version: 8
   },
   "Windows on Computer running deprecatedIE 8 / 2": {
     ua: "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)",
@@ -1088,12 +1076,6 @@ const iphone = {
     device: "iPhone",
     browser: "Safari",
     version: 12
-  },
-  "IPhone on Application running Outlook 3": {
-    ua: "Outlook-iOS/709.2144270.prod.iphone (3.23.0)",
-    device: "iPhone",
-    browser: undefined,
-    version: undefined
   },
   "IPhone on Web Browser running Safari 11": {
     ua: "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A432 Safari/604.1",
