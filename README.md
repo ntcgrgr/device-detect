@@ -14,11 +14,13 @@ console.log(deviceDetect);
 // result example:
 /* {
   "device":"Macintosh",
-  "browser":"Chrome"
+  "browser":"Chrome",
+  "version": 83
 } */
 
-console.log(deviceDetect.device); // returns Macintosh
-console.log(deviceDetect.browser); // returns Chrome
+console.log(deviceDetect.device); // returns "Macintosh"
+console.log(deviceDetect.browser); // returns "Chrome"
+console.log(deviceDetect.version); // returns 83
 ```
 
 ## Supported
@@ -43,6 +45,7 @@ Browsers:
 - Edge
  
 ## Release History
+* 1.1:   Added more Version checks
 * 1.0.7: Update test script.
 * 1.0.6: Add test.js.
 * 1.0.6: Add Linux detection.
