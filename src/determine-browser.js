@@ -2,7 +2,7 @@ import determineDevice from "./determine-device";
 
 export default (ua) => {
   const device = determineDevice(ua);
-  if (ua.indexOf('OPR') > 0 || ua.indexOf('Opera') > 0) {
+  if (ua.indexOf('OPR') >= 0 || ua.indexOf('Opera') >= 0) {
     return 'Opera';
   } else if (ua.indexOf('MSIE ') > 0) {
     return 'deprecatedIE';

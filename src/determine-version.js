@@ -2,18 +2,26 @@ import determineBrowser from "./determine-browser";
 
 export default (ua) => {
   const browser = determineBrowser(ua);
+  let regExp;
   switch (browser) {
     case 'Opera':
-      const regExp = [
+      regExp = [
         /OPR\/([\d.]*)/,
-        /Version\/(.*)? /,
-        /Opera\/(\d.)*/
+        /Opera ([\d.]*)/,
+        /Version\/(.*)*\s?/,
+        /Opera\/([\d.]*)\s?/,
       ].find(regExp => ua.match(regExp))
       return !!regExp
         ? parseInt(ua.match(regExp)[1])
         : undefined;
     case 'deprecatedIE':
-      return parseInt(ua.match(/MSIE ([\d.]*);/)[1]);
+      regExp = [
+        /MSIE ([\d.]*);/,
+        /rv:([\d.]*)/
+      ].find(regExp => ua.match(regExp))
+      return !!regExp
+        ? parseInt(ua.match(regExp)[1])
+        : undefined;
     case 'IE11':
       return parseInt(ua.match(/rv:([\d.]*)/)[1]);
     case 'Edge':
